@@ -97,6 +97,7 @@ rec {
           datadog
           digital-ocean
           typing
+          linode-api
         ];
 
       # For "nix-build --run-env".

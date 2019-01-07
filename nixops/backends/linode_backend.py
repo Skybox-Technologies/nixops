@@ -73,7 +73,7 @@ class LinodeState(MachineState):
             if type_id == t.id:
                 return t
 
-        raise ValueError("Unknown type id %s" % self._type_id)
+        raise ValueError("Unknown type id %s" % type_id)
 
     @staticmethod
     def get_region(client, region_id):
@@ -81,7 +81,7 @@ class LinodeState(MachineState):
             if region_id == r.id:
                 return r
 
-        raise ValueError("Unknown region id %s" % self._region_id)
+        raise ValueError("Unknown region id %s" % region_id)
 
     @staticmethod
     def get_kernel(client, kernel_label):

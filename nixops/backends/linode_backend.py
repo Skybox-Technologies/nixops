@@ -60,9 +60,9 @@ class LinodeState(MachineState):
         except AttributeError:
             depl.evaluate()
 
-        defn = depl.definitions[name]
-
-        self._personal_api_key = defn.personal_api_key
+        if name in depl.definitions:
+            defn = depl.definitions[name]
+            self._personal_api_key = defn.personal_api_key
 
         if not self.private_key:
             (self.private_key, self.public_key) = create_key_pair()
